@@ -1,1 +1,46 @@
-<p>pluck works!</p>
+<div class="m-3">
+  <h2>Map</h2>
+  <br />
+  <div class="row">
+    <!-- Ex - 01 -->
+    <div class="col-md-6">
+      <strong>Ex - 01</strong>
+      <hr />
+      <p class="bg-light py-2 px-3 border rounded">
+        <strong>Pluck:</strong> By Property
+      </p>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of data">
+            <td>{{ item }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- Ex - 02 -->
+    <div class="col-md-6">
+      <strong>Ex - 02</strong>
+      <hr />
+      <p class="bg-light py-2 px-3 border rounded">
+        <strong>Pluck:</strong> By Nested Property
+      </p>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Job Title</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of data2">
+            <td>{{ item }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
