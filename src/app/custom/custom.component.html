@@ -1,0 +1,51 @@
+<div class="m-3">
+  <h2>Custom Observable</h2>
+  <br />
+  <div class="row">
+    <div class="col-md-6">
+      <strong>Ex - 01 (Manual)</strong>
+      <hr />
+      <ul
+        class="techList"
+        id="elContainer"
+        [ngClass]="{
+          completed: techStatus === 'completed',
+          error: techStatus === 'error'
+        }"
+      ></ul>
+    </div>
+
+    <div class="col-md-6">
+      <strong>Ex - 02 (Custom Internal Observable)</strong>
+      <hr />
+      <ul
+        class="techList"
+        id="elContainer2"
+        [ngClass]="{
+          completed: techStatus2 === 'completed',
+          error: techStatus2 === 'error'
+        }"
+      ></ul>
+    </div>
+  </div>
+  <br />
+  <div class="row">
+    <div class="col">
+      <br />
+      <strong>Ex - 03 (Random Names)</strong>
+      <br />
+      <br />
+      <p class="bglight border rounded p-3">
+        <strong>Random Names: </strong>'Rooshan', 'Baber',
+        'Arsalan','Hamza','Umer'
+      </p>
+      <hr />
+      <p>Current Name: <strong class="text-success">{{name}}</strong></p>
+      <span class="badge" [ngClass]="{
+        'text-bg-success': nameStatus === 'completed',
+        'text-bg-danger': nameStatus === 'error',
+        'text-bg-light': nameStatus !== 'completed' && nameStatus !== 'error'
+      }">{{ nameStatus === 'completed' ? 'Successful' : nameStatus === 'error' ? 'Unsuccessful' : 'Pending' }}</span>      
+    </div>
+  </div>
+</div>
